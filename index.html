@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="阿金的个人主页，记录用 AI 做 App、小游戏和视频的过程。">
+<title>阿金 · AI 项目与创作</title>
+<style>
+  :root { color-scheme: light; --ink:#242039; --muted:#615b72; --paper:#f9f7f0; --line:#ded9e6; --purple:#4931a5; --lime:#dbfa82; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 "Inter","PingFang SC","Microsoft YaHei",sans-serif; }
+  a { color:inherit; text-decoration:none; }
+  a:focus-visible { outline:3px solid #7251d4; outline-offset:5px; }
+  .shell { width:min(1120px,calc(100% - 80px)); margin-inline:auto; }
+  header { border-bottom:1px solid var(--line); }
+  nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .brand { display:flex; align-items:center; gap:11px; font-weight:800; }
+  .stamp { width:30px; height:30px; display:grid; place-items:center; background:var(--purple); color:#fff; border-radius:8px; font-size:13px; }
+  .nav-links { display:flex; align-items:center; gap:26px; color:var(--muted); font-size:14px; font-weight:650; }
+  .nav-links a:hover, footer a:hover { color:var(--purple); text-decoration:underline; }
+  .hero { min-height:500px; display:grid; grid-template-columns:1.18fr 1fr; align-items:center; gap:65px; padding-block:66px; }
+  .intro { margin:0 0 13px; color:var(--purple); font-weight:750; }
+  h1,h2,h3,p { margin-top:0; }
+  h1 { margin-bottom:22px; font-size:clamp(44px,6vw,82px); font-weight:900; line-height:1.08; letter-spacing:-.078em; }
+  h1 span { color:var(--purple); }
+  .lead { max-width:400px; margin-bottom:28px; color:var(--muted); font-size:17px; }
+  .button { display:inline-flex; align-items:center; gap:14px; min-height:46px; padding:9px 17px; border-radius:9px; background:var(--ink); color:#fff; font-size:14px; font-weight:700; }
+  .button:hover { background:var(--purple); }
+  .art { min-height:350px; position:relative; isolation:isolate; overflow:hidden; display:grid; place-items:center; border-radius:24px; background:#e9e0fb; }
+  .art::before { content:""; position:absolute; inset:0; z-index:-1; background-image:radial-gradient(#8e7ab9 1px,transparent 1px); background-size:17px 17px; opacity:.49; }
+  .art::after { content:""; position:absolute; width:72%; aspect-ratio:1; border:1px solid #937ac6; border-radius:50%; z-index:-1; }
+  .art-window { position:relative; width:66%; aspect-ratio:1.26; display:grid; place-items:center; padding-top:17px; transform:rotate(-9deg); background:#f9f7f0; border:2px solid var(--ink); border-radius:15px; box-shadow:9px 10px 0 #9275d4; }
+  .window-bar { position:absolute; inset:0 0 auto; height:26px; display:flex; align-items:center; gap:5px; padding-inline:10px; border-bottom:2px solid var(--ink); }
+  .window-bar i { width:6px; height:6px; border-radius:50%; background:var(--purple); }
+  .art-mark { font-size:clamp(63px,11vw,144px); line-height:1; letter-spacing:-.095em; font-weight:900; color:var(--purple); padding-right:.08em; }
+  .spark { position:absolute; top:18%; right:10%; width:22%; aspect-ratio:1; border:2px solid var(--ink); border-radius:50%; display:grid; place-items:center; transform:rotate(12deg); color:var(--ink); background:var(--lime); font-size:clamp(30px,6vw,74px); line-height:1; }
+  .work { border-top:1px solid var(--line); padding-block:40px 64px; }
+  h2 { margin-bottom:22px; font-size:32px; letter-spacing:-.06em; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  article { padding:23px 22px; border-radius:14px; border:1px solid var(--line); background:#fffdfa; }
+  h3 { margin-bottom:6px; font-size:20px; }
+  article p { margin-bottom:0; color:var(--muted); font-size:14px; }
+  footer { border-top:1px solid var(--line); }
+  .footer-content { min-height:78px; display:flex; justify-content:space-between; align-items:center; gap:14px; font-size:14px; }
+  .footer-content a { color:var(--purple); font-weight:700; }
+  @media (max-width:800px) {
+    .shell { width:calc(100% - 44px); }
+    .hero { gap:25px; padding-block:44px; min-height:auto; }
+    .art { min-height:275px; }
+  }
+  @media (max-width:620px) {
+    nav { min-height:58px; }
+    .nav-links { gap:16px; font-size:13px; }
+    .hero { grid-template-columns:1fr; gap:30px; padding-block:40px 35px; }
+    .art { min-height:0; aspect-ratio:1.4; }
+    .cards { grid-template-columns:1fr; }
+    .lead { font-size:16px; }
+    .work { padding-block:28px 42px; }
+  }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<header id="top">
+  <nav class="shell" aria-label="主导航">
+    <a class="brand" href="#top"><span class="stamp" aria-hidden="true">金</span>阿金</a>
+    <div class="nav-links">
+      <a href="#projects">做过的项目</a>
+      <a href="https://space.bilibili.com/1569004614">B 站<span aria-hidden="true"> ↗</span></a>
+    </div>
+  </nav>
+</header>
+<main class="shell">
+  <section class="hero" aria-labelledby="intro-title">
+    <div>
+      <p class="intro">你好，我是阿金。</p>
+      <h1 id="intro-title">用 AI 做<br><span>真实项目</span></h1>
+      <p class="lead">我有程序员背景，平时用 AI 做 App、小游戏和视频。这里记录我做出来的东西，以及做的过程中踩过的坑。</p>
+      <a class="button" href="#projects">看看我做过什么 <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="art-window">
+        <div class="window-bar"><i></i><i></i><i></i></div>
+        <span class="art-mark">AJ</span>
+      </div>
+      <div class="spark">✦</div>
+    </div>
+  </section>
+  <section class="work" id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">做过的项目</h2>
+    <div class="cards">
+      <article>
+        <h3>AIFridge</h3>
+        <p>帮我记住冰箱里有什么。拍小票识别食材，确认后再加入库存。</p>
+      </article>
+      <article>
+        <h3>专注接力</h3>
+        <p>从找布偶猫开始做的网页小游戏。用短关卡练习反应、观察和记忆。</p>
+      </article>
+      <article>
+        <h3>AI 剪辑实测</h3>
+        <p>把口播与录屏交给 AI 剪辑，在剪映里检查原声、画面对位和人物小窗。</p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="shell footer-content">
+    <span>阿金</span>
+    <a href="https://space.bilibili.com/1569004614">在 B 站看项目过程 <span aria-hidden="true">↗</span></a>
+  </div>
+</footer>
+</body>
+</html>
